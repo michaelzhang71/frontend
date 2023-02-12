@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- comment -->
+    Lorem ipsum dolor sit amet.
+    <div class="box">
+      <h2>Title</h2>
+      <p>
+        勝利國有業務其中對待旅遊提出保密官方足球現金一直您是，附近做好破解在他形式名稱，建立畫面專利請大家貼布令人幾個試題最後，重複坐在樂隊，保持我都充滿傳奇家園組織性能她們，改善大概他們房屋住宅研究生部落格著名我想一眼生成，概念有關被人特殊節省引用，表明必要統。
+      </p>
+    </div>
+
+    <ul>
+      <li>list 1</li>
+      <li>list 2</li>
+      <li>list 3</li>
+    </ul>
+
+    <script>
+      /* Node traversing */
+      const body = document.body;
+
+      // childeNodes
+      const nodeList = body.childNodes;
+      console.log("nodeList", nodeList);
+
+      //firstChild/lastChild
+      const firstChild = body.firstChild;
+      console.log("firstChild", firstChild);
+      const lastChild = body.lastChild;
+      console.log("lastChild", lastChild);
+
+      // select one node using [index] syntax
+      const comment = nodeList[1];
+      console.log("comment", comment);
+
+      // parentNode
+      const parentNode = comment.parentNode;
+      console.log("parentNode", parentNode);
+
+      // previous/nextSibling
+      const text = comment.nextSibling;
+      console.log("text", text);
+    </script>
+  </body>
+</html>

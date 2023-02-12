@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 1. window: last resort when query variable: local->parent->global->window
+      // 2. window: provide a set of host environment variables, functions etc....
+      // 3. var declared identifer is added to window
+      // 4. function is a callable object
+      function showMe() {
+        var foo = 123;
+        console.log(foo);
+        console.log(caller);
+      }
+
+      showMe;
+      showMe.call("123");
+
+      const p = {
+        name: "p",
+      };
+      showMe.call(p);
+    </script>
+  </body>
+</html>

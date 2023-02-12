@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Script tag</title>
+    <style>
+      div {
+        width: 200px;
+        height: 200px;
+        background-color: lightblue;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 1. inline script -->
+    <div id="app" onclick="alert('hello world')">Hello world</div>
+    <script>
+      const div = document.querySelector('#app');
+      alert(div);
+    </script>
+    <p><a href="javascript:alert('baidu.com')">Baidu.com</a></p>
+
+    <!-- when JS is disabled to notify user -->
+    <noscript>
+      <p>please enable javascript support in browser</p>
+    </noscript>
+
+    <!-- internal script -->
+    <script>
+      /* attention:
+       * 1. must be pair tag
+       * 2. omit type attribute
+       * 3. when src present, internal script content not parsed
+       * 4. defer/async attibutes to load without blocking rendering
+       * 5. script is loaded per the position just like any other tags
+       * 6. best practice: placed at the end of body section
+       */
+      console.log('internal script at the bottom of the body');
+    </script>
+
+    <!-- 3. external script -->
+    <script async src="./test/exmaple.js"></script>
+    <!-- <link rel="preload" href="./test/exmaple.js" /> -->
+
+    <!-- some interactive functions -->
+    <script>
+      // 1. alert()
+      alert('helloooo');
+      // 2. console.log()
+      console.log('hellooooo');
+      let title = 'sales manager';
+      console.log('title', title);
+      // document.write()
+      document.write('Hiiiiiii');
+    </script>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /* Function: two given variables
+       * arguments: all arguments passed into function
+       * this: pointing to an object depending on how function invoked
+       *  - calling object (leading object)
+       *  - window (default)
+       *  - newly created object returned from constructor function (new Fn)
+       *  - mannully binded object (bind, call, apply)
+       *  - no explicit binding with arrow function (look up parent scope instead)
+       *  */
+
+      // window
+      function foo() {
+        console.log("foo() this:", this);
+      }
+      foo();
+
+      function bar() {
+        setTimeout(function () {
+          console.log("settimeout this:", this);
+        }, 0);
+      }
+      bar();
+
+      function baz() {
+        setTimeout(() => {
+          console.log("settimeout arrow function this:", this);
+        }, 0);
+      }
+      baz();
+    </script>
+  </body>
+</html>
