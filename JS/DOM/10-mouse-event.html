@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 300px;
+        height: 300px;
+        background-color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+    <script>
+      const box = document.querySelector(".box");
+
+      // click
+      box.onclick = function () {
+        console.log("click event");
+      };
+
+      // dbclick
+      box.ondblclick = function () {
+        console.log("double click event");
+      };
+
+      // contectMenu
+      box.oncontextmenu = function () {
+        console.log("contentMenu event");
+      };
+
+      // move
+      // box.onmousemove = function () {
+      //   console.log("mouse move event");
+      // };
+
+      // enter/leave --> no event bubbling and no reaction over child
+      box.onmouseenter = function () {
+        console.log("mouse enter");
+      };
+      box.onmouseleave = function () {
+        console.log("mouse leave");
+      };
+
+      // over/out
+      box.onmouseover = function () {
+        console.log("mouse over");
+      };
+      box.onmouseout = function () {
+        console.log("mouse out");
+      };
+    </script>
+  </body>
+</html>

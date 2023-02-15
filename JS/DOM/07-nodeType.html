@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- comment line -->
+    Lorem ipsum dolor sit amet.
+    <div id="box">
+      <span>Title</span>
+      如今不好意思你想和你保持提示訊息，你會流程面對，近期二手，徹底傢伙已被電信不到監管看法微軟反饋看到協會病人實行初步，女生告訴你瀏覽器笑話諾基亞文本每頁授權放心只是非常，節目眼睛信心一體色彩只不過，筆記本實踐採取簡直國人，後果媽媽作業工作人員，你知道循環相。
+    </div>
+
+    <script>
+      // nodeType property
+
+      const nodeList = document.body.childNodes;
+
+      const commentNode = nodeList[1];
+      const textNode = nodeList[2];
+      const divNode = nodeList[3];
+
+      // nodeType
+      let commentNodeType = commentNode.nodeType;
+      let textNodeType = textNode.nodeType;
+      let divNodeType = divNode.nodeType;
+
+      let commentNodeName = commentNode.nodeName;
+      let textNodeName = textNode.nodeName;
+      let divNodeName = divNode.nodeName;
+
+      console.log(
+        "comment nodetype: ",
+        commentNodeType,
+        "comment nodename: ",
+        commentNodeName
+      );
+      console.log(
+        "text nodetype: ",
+        textNodeType,
+        "text nodename: ",
+        textNodeName
+      );
+      console.log("div nodetype: ", divNodeType, "div nodename: ", divNodeName);
+
+      // node: data | nodeValue property --> get the content of the node
+      console.log("commentNode.data", commentNode.data);
+      console.log("textNode.nodeValue", textNode.nodeValue);
+
+      // element: outerHTML | innerHTML | textContent
+      console.log("divNode.outerHTML", divNode.outerHTML);
+      console.log("divNode.innerHTML", divNode.innerHTML);
+      console.log("divNode.textContent", divNode.textContent);
+
+      // element: hidden property (false/true)
+      divNode.onclick = function () {
+        this.hidden = !this.hidden;
+      };
+    </script>
+  </body>
+</html>

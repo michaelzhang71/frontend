@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="box">
+      <h2>Title</h2>
+      <p>
+        Lorem, ipsum dolor sit amet
+        <span id="keyword">consectetur</span> adipisicing elit. Voluptatem,
+        voluptatum!
+      </p>
+      <form action="" name="login">
+        Account: <input name="account" type="text" />
+      </form>
+    </div>
+    <div class="box">
+      <p>
+        裝備不對總部很好傳說名單有機會，取消形式第一章依然重新分鐘點擊電子商務中港路不喜歡，此處版面一份轉貼清除滿足排名結合，到我印度沒想到也想公斤不代表最新工商防治怎麼哈哈存儲不了以前，存款生意最低訪問就能基金媽媽不好意思比較有時您是早就體現，都會騎士，破壞電。印度沒想到也想公斤不代表最新工商防治怎麼哈哈存儲不了以前，存款生意最低訪問就能基金媽媽不好意思比較有時您是早就體現，都會騎士，破壞電。
+      </p>
+    </div>
+
+    <script>
+      /* get targeted element method:
+       * document.getElementById()
+       * document.querySelector()
+       *  */
+
+      // byClassName
+      const divs = document.getElementsByClassName("box");
+      console.log("divs", divs);
+
+      // loop
+      for (const div of divs) {
+        console.log("div", div);
+        div.style.color = "lightblue";
+      }
+
+      // byId/byClassName/byTagName/byName
+      const keyword = document.getElementById("keyword");
+      console.log("keyword", keyword);
+      keyword.style.color = "brown";
+
+      // querySelector() | querySelectorAll()
+
+      const divEl = document.querySelector("div");
+      const divEls = document.querySelectorAll("div");
+      const keyword = document.querySelector("#keyword");
+    </script>
+  </body>
+</html>
