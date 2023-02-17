@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrow Function</title>
+  </head>
+  <body>
+    <script>
+      /* Arrow function
+       * - no arguments
+       * - no this
+       * - no new invocation (cannot be used as constructor function)
+       *
+       * this binding is determined by lexical scope this
+       * */
+
+      const foo = (n, m) => {
+        return n + m;
+      };
+
+      console.log("foo(10,20)", foo(10, 20));
+
+      // no-return-one-line notation
+      const nums = [1, 2, 3, 4, 5, 6, 7];
+
+      const odd = nums.filter((num) => num % 2 === 1);
+      console.log("odd", odd);
+
+      const sum = nums
+        .filter((num) => num % 2 === 0)
+        .map((item) => item * item)
+        .reduce((pre, current) => pre + current, 0);
+      console.log("sum", sum);
+
+      const bar = () => ({ name: "JS" });
+    </script>
+  </body>
+</html>

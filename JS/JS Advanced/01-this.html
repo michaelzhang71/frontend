@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>This Pointer</title>
+  </head>
+  <body>
+    <script>
+      /* this
+       * this is binded to an object when function invoked
+       * this is determined when function called instead of where it's defined
+       * runtime binding
+       * precedence:
+       *  - new > bind > apply/call > implicit/default
+       *
+       * ----------------------
+       * 'use strict'
+       *  - only 3 scenarios without window
+       *  - primitive value (this) without wrapping Object
+       *  - null/undefined (window otherwise)
+       * */
+
+      // 1. default binding --> window
+      function foo() {
+        console.log("this", this);
+      }
+
+      foo();
+
+      // 2. implicit binding --> object before dot
+      const obj = {
+        name: "obj",
+        foo: foo,
+      };
+
+      obj.foo();
+
+      // 3. explicit binding --> call/apply/bind
+      // edge case: when undefined/null is passed as thisArg, window is used
+      const person = { name: "Joyce" };
+      foo.call(person);
+
+      function bar(name, age) {
+        console.log("this: ", this);
+        console.log("name: ", name, "age: ", age);
+      }
+
+      bar.apply(person, ["JS", 26]);
+      bar.call(person, "HTML", 20);
+
+      bar.apply(undefined);
+      bar.apply(null);
+
+      bar.call(undefined);
+      bar.call(null);
+
+      console.log("bind------");
+
+      const baz = bar.bind({ name: "emma" }, "Lilian", 40);
+      baz();
+      baz();
+      baz.call(123);
+
+      // 4. new binding
+      function Person(name, age) {
+        this.name = name;
+        this.age = age;
+      }
+
+      const p1 = new Person("Jess", 24);
+      console.log("p1", p1);
+    </script>
+  </body>
+</html>
