@@ -1,0 +1,76 @@
+/*
+ * Class definition
+ * syntactic sugar of prototypal inheritance mechanism
+ *
+ *
+ *  */
+
+// old constructor function
+
+function Person1(name, age) {
+  this.name = name;
+  this.age = age;
+}
+
+Person1.prototype.running = function () {};
+
+// class definition
+
+class Person {
+  // new Person --> calling constructor to initialize object created
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+
+  // instance methods
+  running() {
+    console.log(this.name + " running!");
+  }
+
+  eating() {
+    console.log(this.name + " eating!!!");
+  }
+
+  // private property
+  #score = 0;
+
+  // getter and setter for private property
+  get score() {
+    return this.#score;
+  }
+
+  set score(value) {
+    this.#score = value;
+  }
+
+  // class methods: this --> class itself and static property access
+  static print() {
+    console.log("Person class created by " + this.school);
+  }
+
+  static school = "University of Aberdeen";
+}
+
+const p1 = new Person("Joyce", 14);
+const p2 = new Person("Emma", 15);
+
+console.log("p1", p1);
+console.log("p2", p2);
+
+p1.running();
+p2.running();
+p1.eating();
+p2.eating();
+
+// Person.prototype
+console.log("Person.prototype: ", Person.prototype);
+console.log("Person.prototype.constructor: ", Person.prototype.constructor);
+console.log(Object.getPrototypeOf(p1));
+console.log(typeof Person);
+
+// getter and setter
+console.log("p1.score", p1.score);
+p1.score = 90;
+console.log("p1.score", p1.score);
+Person.print();
