@@ -25,3 +25,4 @@ const proxy = new Proxy(person, {
 });
 
 // using proxy to handle person
+console.log(proxy.name);
