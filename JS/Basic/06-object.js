@@ -1,14 +1,11 @@
-/* Object
- * initilizing value by specifying data type
- * string: ''
- * number: 0
- * boolean: flase
- * object: null
- * array: []
+/*
+ * Object
+ * data container of a collection of multiple key:value pairs
  *
  * data type difference:
  * primitive: pass by value
  * object: pass by reference
+ *
  */
 
 var book = {

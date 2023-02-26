@@ -46,5 +46,9 @@ console.log(
 console.log("date:", Typeof(new Date()));
 console.log("regex:", Typeof(/w/));
 console.log("math:", Typeof(Math));
+console.log("set: ", Typeof(new Set()));
+console.log("weakset: ", Typeof(new WeakSet()));
+console.log("map: ", Typeof(new Map()));
+console.log("weakmap: ", Typeof(new WeakMap()));
 console.log("proxy:", Typeof(new Proxy({}, {})));
 console.log("promise:", Typeof(new Promise((res, rej) => {})));

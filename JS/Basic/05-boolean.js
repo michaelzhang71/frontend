@@ -4,8 +4,10 @@ var isLogin = true;
 
 // other values --> boolean
 // 0, '', undefined, null and NaN --> false, all others --> true
-/* !!value --> boolean true or false */
+/* !!value: Boolean(value) */
 // logic operator return a boolean value always
+// Boolean(val)
+// if(val): Boolean(val)
 
 console.log(!!0);
 console.log(!!-0);
